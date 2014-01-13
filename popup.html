@@ -1,0 +1,146 @@
+<!--
+Author: Boris Tsejtlin
+Github: https://github.com/Euphe
+Email: euphetar@gmail.com
+License: GPL 
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+
+Copyright 2014 Boris Tsejtlin
+
+!-->
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        min-width: 200px;
+        padding: 3px;
+        overflow:hidden;
+        overflow-x:hidden;
+      }
+      div, input {
+        outline: none;
+        margin:1px;
+      }
+      #itemname {
+          text-align: center;
+          font-weight: bold;
+          padding:5px;
+      }
+      #error {
+          color:#a03636;
+          text-align: center;
+          font-weight: bold;
+          padding:5px;
+      }
+      .settings{
+        padding:5px;
+      }
+      #output {
+        max-height: 200px;
+        overflow-y:auto;
+        overflow-x:hidden;
+      }
+      #log {
+
+      }
+      .logmsg{
+        padding:3px;
+        font-size: 9pt;
+        margin: 3px 0;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+      .ERROR {
+
+
+      }
+      .OK {
+        background:#14b701;
+      }
+      .WARNING{
+
+        background:#ffc34c;
+      }
+      #Trade, #Stop {
+        border:none;
+        padding:5px;
+        font-weight: bold;
+        color:white;
+      }
+      #Trade:active {
+      
+        padding:4px 4px;
+      }
+      #Stop:active {
+        
+        padding:4px 4px;
+      }
+      #Trade {
+      
+        background:#1d8700;
+        
+       
+      }
+      #Stop {
+
+        background:#a03636;
+
+      }
+      #state {
+        text-align: center;
+        
+      }
+    </style>
+    <div id='strdr_container'>
+      <div id='itemname' ></div>
+      <div id='state'></div>
+      <div id ='error'></div>
+      <div class='settings'>
+       
+          <label >How many?
+            <br/>
+            <input name='quantity' type="textfield" id="quantity" >
+          </label>
+          <br/>
+          
+          <label>At what maximum price?
+            <br/>
+            <input name='price' type="textfield" id="price" >
+          </label>
+          <br/>
+           <br/>
+          <input type="submit" value="Start" id="Trade">
+          <input type="submit" value="Stop" id="Stop">
+        
+      </div>
+      <br/>
+      <div id ='output'>
+        <strong>Operations:</strong> <div id='progress'></div>
+        <br/>
+        <strong>Summary:</strong>
+        <div id="summary">
+          
+
+        </div>
+        <strong>Log:</strong>
+        <div id="log"></div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+
